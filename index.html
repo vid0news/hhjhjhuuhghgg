@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirección</title>
+<script>
+    // Función para verificar si el usuario proviene de la aplicación de Facebook en móviles
+    function esDeFacebookApp() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        return (userAgent.indexOf("FBAN") > -1 || userAgent.indexOf("FBAV") > -1);
+    }
+
+    // Función para redirigir al usuario
+    function redirigir() {
+        if (esDeFacebookApp()) {
+            // Usuario proviene de la aplicación de Facebook
+            window.location.href = "https://www.im-creator.com/viewer/vbid-d07af5d7-ojmkfl0z";
+        } else {
+            // Usuario no proviene de la aplicación de Facebook
+            window.location.href = "https://a.enterentertainment809.xyz/page";
+        }
+    }
+</script>
+</head>
+<body onload="redirigir()">
+</body>
+</html>
